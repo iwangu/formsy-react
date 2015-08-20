@@ -525,7 +525,8 @@ React.render(<Formy.Form disabled={true}/>);
 You can create custom validation inside a form element. The validate method defined will be run when you set new values to the form element. It will also be run when the form validates itself. This is an alternative to passing in validation rules as props.
 
 #### <a name="formnovalidate">formNoValidate</a>
-To avoid native validation behavior on inputs, use the React `formNoValidate` property.
+To avoid native validation behavior on inputs, use the React `formNoValidate` property. If you have several inputs, `formNoValidate` has to be placed on the submit button (see https://github.com/christianalfoni/formsy-react/issues/89).
+
 ```javascript
 var MyInput = React.createClass({
   mixins: [Formsy.Mixin],
